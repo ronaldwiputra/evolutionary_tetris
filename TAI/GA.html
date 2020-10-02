@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tetris AI</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div id="fb-root"></div>
+
+
+
+    <h1 class="header">GA</h1>
+
+    <div class="game-container">
+        <canvas width="200px" height="400px" id="grid-canvas" class="grid"></canvas>
+        <div class="controls-container">
+
+           <div id="scoreBoard-container" class="scoreBoard-container">0</div>
+             <br>
+           <div id="score-container" class="score-container">0</div>
+
+
+            <div id="next-container" class="next-container">
+                <canvas id="next-canvas" class="next-canvas" width="80px" height="80px"></canvas>
+            </div>
+            <a id="ai-button" class="start-ai-button" style="visibility:hidden;">Run AI</a>
+            <a id="reset-button" class="reset-button"style="" >Reset</a>
+            <a id="animation-button" class="reset-button" >Animation</a>
+
+        </div>
+    </div>
+
+
+
+
+<script src="js/polyfill.js"></script>
+<script src="js/grid.js"></script>
+<script src="js/piece.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/stopwatch.js"></script>
+<script src="js/game_manager.js"></script>
+<script src="js/random_piece_generator.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/seedrandom.js"></script>
+<script src="js/ga.js"></script>
+<script src="js/mvpa.js"></script>
+<script>
+// var manager = new GameManager(0.1586902358234772,
+//   0.8095265896007899,
+//   -0.5571249405478063,
+//   0.08239032834037507,
+//   -0.4395890310326478,
+//   -0.5627578920697611,
+// -0.7081076040769441,
+// -0.018118006258804886,
+// -0.4894234975350735);
+ // var manager = new GameManager(-0.00935104678786114,
+ //    0.9596623362570662,
+ //    -0.4031798433302527,
+ //    0.12248416830195197,
+ //    -0.2984400666763186,
+ //    -0.8608253534508469,
+ // -0.5521967432125272,
+ // -0.03071823487134251,
+ // -0.3218566484164599);
+  // var manager = new GameManager(-0.8197994600427181,
+  //   0.9558473683111004,
+  //   -0.7766697120992393,
+  //   -0.3071617800456674,
+  //   0.3902803908112884,
+  //   -0.3070560680272185,
+  // -0.2072205882044985,
+  // -0.018510636228752708,
+  // -0.12489373135896353);
+  // var manager = new GameManager(-0.39839489257476357,
+  // 0.3753789428246046,
+  // -0.890266550101845,
+  // -0.02727162968464958,
+  // -0.7772632222531581,
+  // -0.10878273804031569,
+  // 0.05757671550084131,
+  // 0.02842838372857326,
+  // -0.5146157616655302);
+  // var manager = new GameManager(-0.5897731178135164,
+  //   0.6167183806782228,
+  //   -0.8849122515819374,
+  //   0.009688360369864313,
+  //   -0.8823641696559239,
+  //   0.050676985279825004,
+  // -0.13488356499710719,
+  // -0.045559842534089956,
+  // -0.7501373444807475);
+  // var manager = new GameManager(0.008742614008740102,
+  //   0.6641207871561634,
+  //   -0.6742110308383937,
+  //   -0.49036303316700725,
+  //   -0.9701710923998488,
+  //   -0.5044872331071613,
+  //   -0.4695890171726016,
+  // -0.01160950193780641,
+  // 0.012139879306534151);
+  // var manager = new GameManager(0.008742614008740102,
+  //   0.6641207871561634,
+  //   -0.6742110308383937,
+  //   -0.49036303316700725,
+  //   -0.9701710923998488,
+  //   -0.5044872331071613,
+  //   -0.4695890171726016,
+  // -0.01160950193780641,
+  // 0.012139879306534151);
+  var manager = new GameManager(0.6698807294925779,
+    0.6841387500534917,
+    -0.37394472105813836,
+    -0.6293119636901148,
+    -0.7599808202133249,
+    -0.9028331914982242,
+    -0.468797955591985,
+    -0.09916144624084033,
+    0.10827643231026096,
+  -0.10490860568298466);
+</script>
+<script>
+
+</script>
+</body>
+</html>

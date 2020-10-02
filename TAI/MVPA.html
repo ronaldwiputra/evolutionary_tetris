@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tetris AI</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="fb-root"></div>
+
+
+    <h1 class="header">MVPA</h1>
+
+    <div class="game-container">
+        <canvas width="200px" height="400px" id="grid-canvas" class="grid" frameBorder="0"></canvas>
+        <div class="controls-container">
+             <div id="scoreBoard-container" class="scoreBoard-container">0</div>
+             <br>
+            <div id="score-container" class="score-container">0</div>
+
+
+            <div id="next-container" class="next-container">
+                <canvas id="next-canvas" class="next-canvas" width="80px" height="80px"></canvas>
+            </div>
+            <a id="ai-button" class="start-ai-button" style="visibility:hidden;">Run AI</a>
+            <a id="reset-button" class="reset-button">Reset</a>
+              <a id="animation-button" class="reset-button" >Animation</a>
+        </div>
+    </div>
+
+
+
+<script src="js/polyfill.js"></script>
+<script src="js/grid.js"></script>
+<script src="js/piece.js"></script>
+<script src="js/timer.js"></script>
+<script src="js/stopwatch.js"></script>
+<script src="js/game_manager.js"></script>
+<script src="js/random_piece_generator.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/seedrandom.js"></script>
+<script src="js/ga.js"></script>
+<script src="js/mvpa.js"></script>
+<script>
+
+    // var manager = new GameManager(
+    // -2.008679825261706,
+    // 3.8063665435944003,
+    // -2.251264687728057,
+    // 0.11059928559246285,
+    // -0.17648326243952933,
+    // 0.5943902204100432,
+    // -0.7416838616074218,
+    // 1.5121793742043514,
+    // -1.00206879909356);
+         // var manager = new GameManager(-0.7718397388464725,
+         //   0.9209281496892141,
+         //   -0.9651832803378102,
+         //   -0.21170838473988277,
+         //   0.3544246617300347,
+         //   -0.7062705573209576,
+         // -0.5628134152134618,
+         // -0.05401680347659029,
+         // 0.3291164945723303);
+         // var manager = new GameManager(-0.80923254255217,
+         //   1.094482007774603,
+         //   -0.6661207046167247,
+         //   -0.08016861645456072,
+         //   0.3031650735466095,
+         //   -0.5673787337167159,
+         //   -0.36064390035958066,
+         // 0.01648941777637634,
+         // 0.04092362724237518);
+        // var manager = new GameManager(-0.00935104678786114,
+        //    0.9596623362570662,
+        //    -0.4031798433302527,
+        //    -0.12248416830195197,
+        //    -0.2984400666763186,
+        //    -0.8608253534508469,
+        // -0.5521967432125272,
+        // -0.03071823487134251,
+        // -0.3218566484164599);
+
+    //    {"altitudeDifference":-0.19599141394824904,"linesWeight":0.2594041453984691,"holesWeight":-1,"sumWellsWeight":-1,"pileHeightWeight":-0.2670627611891697,"columnsTransitionsWeight":-0.9956868057081331,"rowTransitionsWeight":-0.7084696281857331,"blockWeight":-0.37561818894044885,"maximumWellsDepthWeight":0.14278778535059133,"bumpiness":0.44768976880987615,"fitness":398.6,"block":null,"ctr":null}
+    var manager = new GameManager(-0.19599141394824904,
+          0.2594041453984691,
+          -1,
+          -1,
+          -0.2670627611891697,
+          -0.9956868057081331,
+          -0.7084696281857331,
+          -0.37561818894044885,
+          0.14278778535059133,
+          0.44768976880987615
+      );
+
+//       altitudeDifference: -0.7469437957593688
+// block: -0.22960290527358296
+// bumpiness: 0.029744498856450925
+// columnsTransitions: -0.6002853494350943
+// holesWeight: -0.20135653744254708
+// linesWeight: 0.9666595999689896
+// maximumWellsDepth: -0.02220506733939271
+// pileHeight: 0.609860580720566
+// rowTransitions: -0.22173677161248903
+// sumWellsWeight: -0.27421586887415267
+
+// {"altitudeDifference":-0.7615559052088804,"linesWeight":0.9999777097926115,"holesWeight":-0.9393441434111781,"sumWellsWeight":-0.9995529147624116,"pileHeightWeight":0.45400759890500986,"columnsTransitionsWeight":-1,"rowTransitionsWeight":-0.9830381968171967,
+// "blockWeight":-0.46935373235158506,
+// "maximumWellsDepthWeight":0.24462499992405523,"bumpiness":-0.3987984934351045,"fitness":null,"block":100,"ctr":1}
+</script>
+<script>
+
+</script>
+</body>
+</html>
